@@ -1,19 +1,30 @@
 # Jobs
-# Springfield Nuclear Power Plant
-- company: Springfield Nuclear Power Plant
-  position: Safety Inspector
-  duration: Nov, 1980 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>Ate lots of donuts</li><li>Fell asleep rarely</li><li>Left promptly at end of day (sometimes earlier)</li></ul>
+# Artomatix
+- company: Artomatix
+  position: Deep Learning Engineer
+  duration: 2016 &mdash; 2018
+  summary: Working mainly on parametric neural texture synthesis and style transfer. Achieved state of the art results in that domain and published a paper called “Stable and Controllable Neural Texture Synthesis and Style Transfer Using Histogram Losses”. Also worked Neural texture Weathering, texture Segmentation and Single Image Super Resolution. Wrote a neural network runtime from scratch using C++ and OpenCL for integration with the company product.
 
-# Windmill Crank Operator
-- company: Sir Putt-A-Lot's Merrie Olde Fun Centre
-  position: Safety Inspector
-  duration:  Jun, 1978 &mdash; Sept, 1979
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+# Ubisoft
+- company: Ubisoft
+  position: Software Engineer
+  duration:  2015
+  summary: Setting up the mobile build system to build and run unit test on mobile devices (iOS and Android). Also working as part of the Ubiservices group to develop a cross- platform library providing online features for all Ubisoft games.
 
+# Blackmagic Design
+- company: Blackmagic Design
+  position: Infrastructure Engineer
+  duration:   2014
+  summary: Setting up the build system (Python) to be able to request a build through a web UI in one click. The system was checking out the codebase from a git repository, building it on various platforms, testing it, and packaging it as a ready to ship package.
 
-# Front Desk Attendant
-- company: Simpson Lazer Tag
-  position: Front Desk Attendant
-  duration:   Jun, 1975  &mdash; May, 1978
-  summary: Boy, when Marge first told me she was going to the Police Academy, I thought it would be fun and exciting, you know, like the movie... Spaceballs. But instead, it's been painful and disturbing, like the movie Police Academy.
+# Good Game Productions
+- company: Good Game Productions
+  position: Video Game Programmer
+  duration: 2014
+  summary: Porting the in house game creation framework from Cocos2d (Objective-C) to Cocos2d-x (C++). The framework allowed game designer to set-up a scene layout in a drag-and-drop editor and to export everything as a scene file ready to load in the game engine for faster content creation.
+
+# OutOfTheBit
+- company: OutOfTheBit
+  position: Junior Developper
+  duration: 2013
+  summary: Mobile game development using an in-house cross-platform framework (C++). Created 3 games in one year (Four in a row / Dots & Boxes / Sound Ride), which where published for iOS, Android and Windows Phone. All projects were developed by a team composed of a developer and a designer.
