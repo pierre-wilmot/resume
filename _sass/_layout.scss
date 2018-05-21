@@ -72,3 +72,15 @@
   padding-left: $grid-gutter;
   vertical-align: top;
 }
+
+.game-block {
+    float: left;
+    width: 244px;
+    height: 200px;
+    text-align : center;
+}
+
+.game-icon {
+    border-radius: 18%;
+    margin : 12px;
+}

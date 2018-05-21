@@ -66,6 +66,29 @@
       <!-- end Experience -->
       {% endif %}
 
+      {% if site.resume_section_products %}
+      <!-- begin Products -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Shipped Games</h2>
+        </header>
+
+        <div class="resume-item">
+          {% for product in site.data.products %}
+	  <div class="game-block">
+	    <img class="game-icon" src="images/{{ product.icon }}" alt="{{ product.name }}" itemprop="image">
+	    <h4 class="resume-item-title" itemprop="name">{{ product.name }}</h4>
+	    {% if product.ios %} <a href="{{  product.ios }}" ><img height="30px" src="images/apple.png" /></a> {% endif %}
+	    {% if product.android %}<a href="{{ product.android }}"><img height="30px"src="images/google.png" /></a> {% endif %}
+	  </div>
+          {% endfor %}
+	  <div style="clear:both;"></div>
+        </div>
+
+      </section>
+      <!-- end Products -->
+      {% endif %}
 
       {% if site.resume_section_education %}
       <!-- begin Education -->
