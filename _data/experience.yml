@@ -1,4 +1,10 @@
 # Jobs
+# Deutsche Borse
+- company: Deutsche B&#246;rse
+  position: Software Engineer
+  duration: 2018
+  summary: Developing and refactoring the EUREX exchange codebase. Leading the implementation of the new TRF Baskets feature. Worked on decoupling the application logic from the messaging and database components in order to be able to set up proper unit testing and run the application in isolation from the rest of the software ecosystem. This led to much more robust and easier to understand code and faster development process.
+
 # Artomatix
 - company: Artomatix
   position: Deep Learning Engineer
