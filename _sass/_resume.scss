@@ -3,6 +3,18 @@
 
 // util
 
+body {
+    background-image : url("../images/footer.png");
+    background-repeat: no-repeat;
+    background-position:  right bottom;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        background-size: 25%;
+    }
+}
+
 .section-header {
   @include section_border;
   margin-bottom: 1.5rem;
@@ -185,6 +197,7 @@
     margin: 0;
     font-size: .875rem;
     color: #999;
+    font-style: italic;
 
     > a {
       font-weight: 700;
@@ -198,7 +211,11 @@
 @media print {
   .no-print { display: none !important }
   .print-only { display: block !important }
-  body { font-size: 12px; line-height: 1rem; }
+  body
+  {
+      font-size: 12px;
+      line-height: 1rem;
+  }
   .page-header { padding: 1rem 0 .2rem;
     .header-name {
       @include sans_bold;
