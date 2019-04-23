@@ -1,3 +1,18 @@
+- name: 2048
+  android: https://play.google.com/store/apps/details?id=org.cocos2dx.OwlGames_2048
+  ios: https://itunes.apple.com/us/app/2048/id1442119741?mt=8
+  icon: 2048.png
+
+- name: Snake
+  android: https://play.google.com/store/apps/details?id=org.cocos2dx.OwlGames_Snake
+  icon: snake.png
+  ios: https://itunes.apple.com/us/app/snake/id1442145955
+
+- name: Laser Maze
+  android: https://play.google.com/store/apps/details?id=fr.OwlGames.LaserMaze
+  ios: https://itunes.apple.com/us/app/2048/id1442119741?mt=8
+  icon: lasermaze.png
+
 - name: Four In A Row
   android: https://play.google.com/store/apps/details?id=com.outofthebit.fourinarow
   ios: https://itunes.apple.com/app/four-in-a-row-2013/id604921715
@@ -12,13 +27,3 @@
   android: https://play.google.com/store/apps/details?id=com.outofthebit.soundride&hl=en
   ios: https://itunes.apple.com/cz/app/sound-ride/id695116156
   icon: soundride.png
-
-- name: Laser Maze
-  android: https://play.google.com/store/apps/details?id=fr.OwlGames.LaserMaze
-  icon: lasermaze.png
-
-- name: 2048
-  android: https://play.google.com/store/apps/details?id=org.cocos2dx.OwlGames_2048
-  icon: 2048.png
-
-
