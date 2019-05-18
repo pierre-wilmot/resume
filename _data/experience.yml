@@ -1,4 +1,11 @@
 # Jobs
+
+# Fetch
+- company: Fetch.ai
+  position: Machine Learning Engineer
+  duration: 2019
+  summary: Designing, implementing and optimising the machine learning framework for the Fetch virtual machine. Re-implemented Word2Vec in C++ as a compute graph in order to build a semantic search engine for the Fetch Open Economic Framework. All the code has been open sourced under Apache license, and a demo of my work on Word2Vec is available at <a href="https://github.com/pierre-wilmot/Word2Vec-CPP">https://github.com/pierre-wilmot/Word2Vec-CPP</a>
+
 # Deutsche Borse
 - company: Deutsche B&#246;rse
   position: Software Engineer
