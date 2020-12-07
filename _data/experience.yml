@@ -1,5 +1,12 @@
 # Jobs
 
+# Samsung
+- company: Samsung Research UK
+  logo: samsung.png
+  position: Machine Learning Engineer
+  duration: 2019-2020
+  summary: "Working as part of  the Extended Reality team, that deals with Samsung’s AR/VR technologies.<ul><li>2019 - Neural texture synthesis: developed a meta learning based texture synthesis for textile generation. This was targeted at clothing generation for virtual avatars.</li><li>2020 - Digital Human Avatar : developed a pipeline to create virtual avatars from a capture rig input. Worked on the 3D projection module, the segmentations module and the hair reconstruction.</li></ul>"
+
 # Fetch
 - company: Fetch.ai
   logo: fetch.png
