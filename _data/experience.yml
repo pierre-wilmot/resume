@@ -5,7 +5,7 @@
   logo: samsung.png
   position: Machine Learning Engineer
   duration: 2019-2021
-  summary: "Working as part of  the Extended Reality team, that deals with Samsung’s AR/VR technologies.<ul><li>2019 - Neural texture synthesis: developed a meta learning based texture synthesis for textile generation. This was targeted at clothing generation for virtual avatars.</li><li>2020 - Digital Human Avatar : developed a pipeline to create virtual avatars from a capture rig input. Worked on the 3D projection module, the segmentations module and the hair reconstruction. Won two awards for Software Architecture and for Code Review Processes</li><li>2021 - Human pose estimation on mobile, Ported Openpose to mobile using PyTorch for Android, with support for multi person face and body keypoints.<xs/li></ul>"
+  summary: "Working as part of  the Extended Reality team, that deals with Samsung’s AR/VR technologies.<ul><li>2019 - Neural texture synthesis: developed a meta learning based texture synthesis for textile generation. This was targeted at clothing generation for virtual avatars.</li><li>2020 - Digital Human Avatar: developed a pipeline to create virtual avatars from a capture rig input. Worked on the 3D projection module, the segmentations module and the hair reconstruction. Won two awards for Software Architecture and for Code Review Processes</li><li>2021 - Human pose estimation on mobile: ported Openpose to mobile using PyTorch for Android, with support for multi person face and body keypoints.</li></ul>"
 
 # Fetch
 - company: Fetch.ai
