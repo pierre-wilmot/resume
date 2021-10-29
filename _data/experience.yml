@@ -1,5 +1,12 @@
 # Jobs
 
+# Mirriad
+- company: Mirriad
+  logo: mirriad.png
+  position: Senior C++ and Machine Learning Engineer
+  duration: 2021
+  summary: "Working on Mirriad compositing software. Integrating PyTorch deep learning models for automatic colour grading in and keypoint detection in C++. Working on automatic embedding of advertising for sports broadcast, with player and ball tracking running live on video streams."
+
 # Samsung
 - company: Samsung Research UK
   logo: samsung.png
