@@ -1,64 +1,71 @@
 # Jobs
 
+# Dimension
+- company: Dimension
+  logo: dimension.png
+  position: Senior Engineer
+  duration: 2022-2023
+  summary: "At Dimension Studio, I was involved in the creation of volumetric video from multiview video streams. My focus was initially on acquiring materials through differential rendering for relighting. Later, I worked on neural radiance fields and optimized the architecture to produce dynamic scenes instead of just static ones."
+
 # Mirriad
 - company: Mirriad
   logo: mirriad.png
   position: Senior C++ and Machine Learning Engineer
   duration: 2021
-  summary: "Working on Mirriad compositing software. Integrating PyTorch deep learning models for automatic colour grading in and keypoint detection in C++. Working on automatic embedding of advertising for sports broadcast, with player and ball tracking running live on video streams."
+  summary: "At Mirriad, I was responsible for developing and integrating PyTorch deep learning models for automatic color grading and keypoint detection in the company's compositing software. I also worked on a project to automatically embed advertising into sports broadcasts, utilizing player and ball tracking that ran live on video streams."
 
 # Samsung
 - company: Samsung Research UK
   logo: samsung.png
   position: Machine Learning Engineer
   duration: 2019-2021
-  summary: "Working as part of  the Extended Reality team, that deals with Samsung’s AR/VR technologies.<ul><li>2019 - Neural texture synthesis: developed a meta learning based texture synthesis for textile generation. This was targeted at clothing generation for virtual avatars.</li><li>2020 - Digital Human Avatar: developed a pipeline to create virtual avatars from a capture rig input. Worked on the 3D projection module, the segmentations module and the hair reconstruction. Won two awards for Software Architecture and for Code Review Processes</li><li>2021 - Human pose estimation on mobile: ported Openpose to mobile using PyTorch for Android, with support for multi person face and body keypoints.</li></ul>"
+  summary: "As a member of Samsung's Extended Reality team, I have been involved in various projects utilizing AR/VR technologies. In 2019, I developed a meta-learning based approach for generating textures for textile generation, particularly for clothing virtual avatars. In 2020, I played a key role in the development of a pipeline for creating virtual avatars from capture rig inputs. My responsibilities included working on the 3D projection module, the segmentation module, and hair reconstruction. My work on this project was recognized with two awards for Software Architecture and Code Review Processes. In 2021, I successfully ported Openpose to mobile using PyTorch for Android, with support for multi-person face and body keypoint estimation."
 
 # Fetch
 - company: Fetch.ai
   logo: fetch.png
   position: Machine Learning Engineer
   duration: 2019
-  summary: Designing, implementing and optimising the machine learning framework for the Fetch virtual machine. Re-implemented Word2Vec in C++ as a compute graph in order to build a semantic search engine for the Fetch Open Economic Framework. All the code has been open sourced under Apache license, and a demo of my work on Word2Vec is available at <a href="https://github.com/pierre-wilmot/Word2Vec-CPP">https://github.com/pierre-wilmot/Word2Vec-CPP</a>
+  summary: "I was responsible for designing, implementing and optimizing the machine learning framework for the Fetch virtual machine. I also re-implemented the Word2Vec algorithm in C++ as a compute graph to build a semantic search engine for the Fetch Open Economic Framework. This work was open sourced under the Apache license and a demonstration of the Word2Vec implementation is available at https://github.com/pierre-wilmot/Word2Vec-CPP"
 
 # Deutsche Borse
 - company: Deutsche B&#246;rse
   logo: db.png
   position: Software Engineer
   duration: 2018
-  summary: Developing and refactoring the EUREX exchange codebase. Leading the implementation of the new TRF Baskets feature. Worked on decoupling the application logic from the messaging and database components in order to be able to set up proper unit testing and run the application in isolation from the rest of the software ecosystem. This led to much more robust and easier to understand code and faster development process.
+  summary: "As a software developer working on the EUREX exchange, I was responsible for developing and refactoring the codebase. I was also the lead developer for the implementation of the new TRF Baskets feature. My main focus was on decoupling the application logic from the messaging and database components in order to improve unit testing and enable the application to run independently from the rest of the software ecosystem. This resulted in a more robust, easier to understand codebase, and a faster development process."
 
 # Artomatix
 - company: Artomatix
   logo: artomatix.png
   position: Deep Learning Engineer
   duration: 2016 &mdash; 2018
-  summary: Working mainly on parametric neural texture synthesis and style transfer. Achieved state of the art results in that domain and published a paper called “Stable and Controllable Neural Texture Synthesis and Style Transfer Using Histogram Losses”. Also worked Neural texture Weathering, texture Segmentation and Single Image Super Resolution. Wrote a neural network runtime from scratch using C++ and OpenCL for integration with the company product.
+  summary: "As a researcher, I focused primarily on parametric neural texture synthesis and style transfer, achieving state-of-the-art results in the field. I published a paper titled &ldquo;Stable and Controllable Neural Texture Synthesis and Style Transfer Using Histogram Losses&rdquo;. Additionally, I worked on neural texture weathering, texture segmentation, and single image super resolution. I also developed a neural network runtime from scratch using C++ and OpenCL, which was integrated into the company's product."
 
 # Ubisoft
 - company: Ubisoft
   logo: ubi.png
   position: Software Engineer
   duration:  2015
-  summary: Setting up the mobile build system to build and run unit test on mobile devices (iOS and Android). Also working as part of the Ubiservices group to develop a cross- platform library providing online features for all Ubisoft games.
+  summary: "At Ubisoft, I was responsible for establishing the mobile build system to compile and run unit tests on both iOS and Android devices. Additionally, as a member of the Ubiservices team, I contributed to the development of a cross-platform library that delivers online features for all Ubisoft games."
 
-# Blackmagic Design
+  # Blackmagic Design
 - company: Blackmagic Design
   logo: bmd.png
   position: Infrastructure Engineer
   duration:   2014
-  summary: Setting up the build system (Python) to be able to request a build through a web UI in one click. The system was checking out the codebase from a git repository, building it on various platforms, testing it, and packaging it as a ready to ship package.
+  summary: "At BlackMagic Design, I played a key role in establishing the build system using Python. This system allowed for convenient, one-click builds through a web user interface. The process involved checking out the codebase from a Git repository, compiling it for multiple platforms, performing thorough testing, and packaging the result into a ready-to-ship package."
 
 # Good Game Productions
 - company: Good Game Productions
   logo: gg.png
   position: Video Game Programmer
   duration: 2014
-  summary: Porting the in house game creation framework from Cocos2d (Objective-C) to Cocos2d-x (C++). The framework allowed game designer to set-up a scene layout in a drag-and-drop editor and to export everything as a scene file ready to load in the game engine for faster content creation.
+  summary: "At Good Game Production, I was responsible for porting the in-house game creation framework from Cocos2d (Objective-C) to Cocos2d-x (C++). This involved ensuring seamless compatibility between the two platforms and streamlining the game development process. With the updated framework, game designers were able to quickly and efficiently create and manage game scenes using a drag-and-drop editor. The scene files could then be easily exported for use in the game engine, enabling faster content creation."
 
 # OutOfTheBit
 - company: OutOfTheBit
   logo: ootb.png
   position: Junior Developper
   duration: 2013
-  summary: Mobile game development using an in-house cross-platform framework (C++). Created 3 games in one year (Four in a row / Dots & Boxes / Sound Ride), which where published for iOS, Android and Windows Phone. All projects were developed by a team composed of a developer and a designer.
+  summary: "At OutOfTheBit, I was part of the mobile game development team using an in-house cross-platform framework in C++. I played a key role in the creation of three games - Four in a Row, Dots & Boxes, and Sound Ride - within a year and they were published on various platforms, including iOS, Android, and Windows Phone. Each project was developed by a team of one developer and one designer. I am proud to mention that Four in a Row and Dots & Boxes reached the top 1 and top 2 spots in the Apple App Store rankings, respectively."
