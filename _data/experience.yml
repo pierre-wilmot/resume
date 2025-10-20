@@ -1,5 +1,12 @@
 # Jobs
 
+# Playstation
+- company: PlayStation (Sony Interactive Entertainment)
+  logo: playstation.png
+  position: Machine Learning Engineer
+  duration: 2025
+  summary: "At PlayStation, I work on a deep learning pipeline for high-fidelity facial animation. The system learns to animate production-ready Maya face rigs directly from head-mounted camera footage. My contributions focus on building and optimizing neural architectures that map video inputs to rig control parameters, using a small set of artist-annotated training sequences. My work bridges deep learning research and practical production tools, accelerating the animation process for cinematic game content."
+
 # Dimension
 - company: Dimension
   logo: dimension.png
