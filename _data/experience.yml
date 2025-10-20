@@ -11,8 +11,8 @@
 - company: Dimension
   logo: dimension.png
   position: Senior Engineer
-  duration: 2022-2023
-  summary: "At Dimension Studio, I was involved in the creation of volumetric video from multiview video streams. My focus was initially on acquiring materials through differential rendering for relighting. Later, I worked on neural radiance fields and optimized the architecture to produce dynamic scenes instead of just static ones."
+  duration: 2022-2025
+  summary: "At Dimension Studio, I was involved in the creation of volumetric video from multiview video streams. My focus was initially on acquiring materials through differential rendering for relighting. Later, I worked on neural radiance fields and optimized the architecture to produce dynamic scenes instead of just static ones. I then shifted my focus to scene understanding for virtual production, providing solutions for object segmentation and depth estimation in video footage. Lastly, I worked on generative AI for image and video creation, leveraging tools such as Stable Diffusion, LoRA fine-tuning, and ControlNets to achieve high-quality and customizable outputs."
 
 # Mirriad
 - company: Mirriad
