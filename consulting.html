@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ Refactoring Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F7F6F2;
+      --ink:       #1A1A1A;
+      --ink-mid:   #4A4A4A;
+      --ink-light: #888888;
+      --blue:      #1C3F6E;
+      --blue-pale: #E8EDF4;
+      --rule:      #D8D6CF;
+      --mono: 'IBM Plex Mono', monospace;
+      --sans: 'Inter', sans-serif;
+    }
+
+    html { font-size: 17px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+    .col {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section { padding: 5rem 0; }
+    section + section { border-top: 1px solid var(--rule); }
+
+    /* ── Nav ── */
+    nav {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px solid var(--blue);
+      padding-bottom: 1px;
+      transition: opacity 0.15s;
+    }
+    .nav-cta:hover { opacity: 0.6; }
+
+    /* ── Hero ── */
+    .hero { padding: 6rem 0 5rem; }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--ink-light);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-family: var(--mono);
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--blue);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--ink-mid);
+      max-width: 560px;
+      margin-bottom: 3rem;
+      line-height: 1.75;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--bg);
+      background: var(--blue);
+      padding: 0.85rem 1.75rem;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: opacity 0.15s;
+    }
+    .hero-cta:hover { opacity: 0.82; }
+
+    /* ── Symptoms ── */
+    .symptoms-label {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--ink-light);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .symptoms h2 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 2.5rem;
+    }
+
+    .symptom-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .symptom-list li {
+      display: grid;
+      grid-template-columns: 1.5rem 1fr;
+      gap: 0.75rem;
+      color: var(--ink-mid);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .symptom-list li::before {
+      content: '→';
+      font-family: var(--mono);
+      color: var(--blue);
+      font-size: 0.85rem;
+      margin-top: 0.15rem;
+    }
+
+    /* ── War story / diff ── */
+    .story h2 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .story-intro {
+      color: var(--ink-mid);
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+
+    .diff {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+
+    .diff-col { padding: 1.5rem; }
+
+    .diff-col.before {
+      background: #FDF2F2;
+      border-right: 1px solid var(--rule);
+    }
+
+    .diff-col.after {
+      background: #F2FDF4;
+    }
+
+    .diff-header {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .diff-col.before .diff-header { color: #C0392B; }
+    .diff-col.after .diff-header  { color: #27AE60; }
+
+    .diff-lines { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    .diff-line {
+      color: var(--ink-mid);
+      font-size: 0.75rem;
+    }
+
+    .diff-line.highlight {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .diff-metric {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .diff-metric .val {
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .diff-col.before .diff-metric .val { color: #C0392B; }
+    .diff-col.after  .diff-metric .val { color: #27AE60; }
+
+    .diff-metric .label {
+      font-size: 0.68rem;
+      color: var(--ink-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+
+    .story-body {
+      color: var(--ink-mid);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .story-body p + p { margin-top: 1rem; }
+
+    /* ── How it works ── */
+    .process h2 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 2.5rem;
+    }
+
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      gap: 1.25rem;
+      padding: 1.75rem 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .process-step:last-child { border-bottom: 1px solid var(--rule); }
+
+    .step-num {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: 0.05em;
+      padding-top: 0.25rem;
+    }
+
+    .step-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .step-content p {
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      line-height: 1.65;
+    }
+
+    .step-note {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--blue);
+      background: var(--blue-pale);
+      padding: 0.2rem 0.55rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── Why me ── */
+    .why h2 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 2rem;
+    }
+
+    .why-body {
+      font-size: 1rem;
+      color: var(--ink-mid);
+      line-height: 1.8;
+    }
+
+    .why-body p + p { margin-top: 1rem; }
+
+    .why-body strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ── Contact ── */
+    .contact { padding-bottom: 7rem; }
+
+    .contact h2 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .contact-sub {
+      color: var(--ink-mid);
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    .contact-link {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 2px;
+      transition: opacity 0.15s;
+    }
+    .contact-link:hover { opacity: 0.6; }
+
+    .contact-note {
+      margin-top: 1.5rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink-light);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer p {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink-light);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .diff {
+        grid-template-columns: 1fr;
+      }
+      .diff-col.before {
+        border-right: none;
+        border-bottom: 1px solid var(--rule);
+      }
+      .footer-inner { flex-direction: column; gap: 0.5rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="#">P. WILMOT — C++ CONSULTING</a>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="col">
+      <p class="hero-eyebrow">C++ Refactoring · Technical Debt</p>
+      <h1>Your team is slowing down.<br><em>The codebase is why.</em></h1>
+      <p class="hero-sub">
+        I come in, read the code, find what's coupled that shouldn't be,
+        and fix it. Short engagement, documented handover, measurable outcome.
+      </p>
+      <a class="hero-cta" href="#contact">Start with an audit</a>
+    </div>
+  </section>
+
+  <!-- ── Symptoms ── -->
+  <section class="symptoms">
+    <div class="col">
+      <p class="symptoms-label">You recognise this</p>
+      <h2>The signs are there before the crisis is.</h2>
+      <ul class="symptom-list">
+        <li>Features that took a sprint now take a quarter, and nobody can explain exactly why</li>
+        <li>Build times have crept from two minutes to forty-five, and engineers have stopped trying to fix them</li>
+        <li>Changing one class breaks three things in a module that has no obvious relationship to it</li>
+        <li>New hires take six months to become productive — not because they're slow, but because the codebase is opaque</li>
+        <li>Your customer success team is chasing bugs that have been "known issues" for two years</li>
+        <li>Senior engineers are spending more time explaining the code than writing it</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── War story ── -->
+  <section class="story">
+    <div class="col">
+      <p class="symptoms-label">A real example</p>
+      <h2>Two hours to five minutes.</h2>
+      <p class="story-intro">
+        At a major European financial exchange, the only way to test backend business logic was to boot the entire system.
+      </p>
+
+      <div class="diff">
+        <div class="diff-col before">
+          <div class="diff-header">— Before</div>
+          <div class="diff-lines">
+            <div class="diff-line">Boot full backend stack</div>
+            <div class="diff-line">Boot client application</div>
+            <div class="diff-line highlight">Craft a network request</div>
+            <div class="diff-line highlight">Send through networking layer</div>
+            <div class="diff-line">Wait for full processing cycle</div>
+            <div class="diff-line">Observe result</div>
+            <div class="diff-line">Repeat</div>
+          </div>
+          <div class="diff-metric">
+            <span class="val">~2 hrs</span>
+            <span class="label">per iteration</span>
+          </div>
+        </div>
+        <div class="diff-col after">
+          <div class="diff-header">+ After</div>
+          <div class="diff-lines">
+            <div class="diff-line highlight">Compile business logic module only</div>
+            <div class="diff-line highlight">Run unit tests directly</div>
+            <div class="diff-line" style="color: transparent; user-select:none;">—</div>
+            <div class="diff-line" style="color: transparent; user-select:none;">—</div>
+            <div class="diff-line" style="color: transparent; user-select:none;">—</div>
+            <div class="diff-line" style="color: transparent; user-select:none;">—</div>
+            <div class="diff-line" style="color: transparent; user-select:none;">—</div>
+          </div>
+          <div class="diff-metric">
+            <span class="val">~5 min</span>
+            <span class="label">per iteration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-body">
+        <p>
+          The problem wasn't the tests — there were barely any. The problem was that the
+          business logic had grown entangled with the networking layer. It expected network
+          objects as input. Two things that had no reason to know about each other had
+          become inseparable.
+        </p>
+        <p>
+          The fix was architectural: redraw the boundary. Pull the networking module out.
+          Give the business logic only what it actually needs to do its job. Once the boundary
+          was clean, the networking includes were gone, compile times dropped, and tests could
+          run without any infrastructure at all.
+        </p>
+        <p>
+          The team went from two-hour iteration cycles to five minutes. Not because we wrote
+          better code — because we put the right code in the right place.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Process ── -->
+  <section class="process">
+    <div class="col">
+      <p class="symptoms-label">How it works</p>
+      <h2>A short engagement with a defined exit.</h2>
+      <div class="process-steps">
+
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Audit</h3>
+            <p>I read the codebase. Not a summary — the actual code. I map the dependency graph, identify where boundaries have collapsed, and find the coupling that's costing you velocity.</p>
+            <span class="step-note">3–5 days · fixed fee · you own the report</span>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Diagnosis report</h3>
+            <p>A written report that names the structural problems, explains why they matter, and gives you something concrete to take to a board or an engineering team. No filler. Specific to your codebase.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Refactor proposal</h3>
+            <p>If the audit reveals work worth doing — and it usually does — I'll propose a scoped refactor: what gets fixed, in what order, how long it takes, what the outcome looks like. You decide whether to proceed.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Implementation &amp; handover</h3>
+            <p>I write the code, work alongside your team, and leave with documented architectural decisions. The goal is that your engineers understand exactly what changed and why — not a dependency on me.</p>
+            <span class="step-note">Daily rate · time-boxed · clean exit</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why me ── -->
+  <section class="why">
+    <div class="col">
+      <p class="symptoms-label">Why this works</p>
+      <h2>Fifteen years of large C++ systems across multiple industries.</h2>
+      <div class="why-body">
+        <p>
+          I've worked in finance, games, startups, and enterprise infrastructure.
+          The domains differ. <strong>The structural failure patterns don't.</strong>
+          Business logic that has grown entangled with infrastructure. Modules that accreted
+          responsibilities they were never meant to own. Boundaries that were never drawn,
+          or drawn wrong and never corrected.
+        </p>
+        <p>
+          Recognising those patterns quickly is the job. I prioritise reading systems
+          end-to-end rather than relying on IDE-assisted navigation — it's the only way
+          to understand how a codebase actually behaves, versus how it was intended to behave.
+          That approach, applied across enough large codebases, produces reliable structural
+          intuition.
+        </p>
+        <p>
+          I'm not a consultancy. You won't get a methodology deck or a junior on your
+          codebase. You get one senior engineer who will read your code carefully, tell
+          you specifically what's wrong, and fix it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section class="contact" id="contact">
+    <div class="col">
+      <p class="symptoms-label">Get in touch</p>
+      <h2>Start with a conversation.</h2>
+      <p class="contact-sub">
+        If any of this sounds familiar, send me a brief description of where your team is feeling the friction.
+        The audit is a low-commitment entry point — a few days, a fixed fee, something concrete at the end.
+      </p>
+      <a class="contact-link" href="mailto:pierre.wilmot@gmail.com">pierre.wilmot@gmail.com</a>
+      <p class="contact-note">Based in the UK · Available for remote and on-site engagements</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <p>P. WILMOT · C++ REFACTORING CONSULTING</p>
+      <p>© 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>
