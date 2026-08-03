@@ -1,10 +1,18 @@
 # Jobs
 
+# The Klone Factory
+- company: The Klone Factory
+  logo: klonefactory.png
+  position: Founder
+  duration: 2026 &mdash; Present
+  url: "https://theklonefactory.com/"
+  summary: "I founded <a href=\"https://theklonefactory.com/\">The Klone Factory</a>, a 3D capture studio for auction houses and dealers. Buyers who attend a viewing day can inspect a piece by hand and bid with confidence; remote bidders, working only from flat catalogue photos, often can't judge condition well enough to bid the same amount, if at all. I built the full pipeline myself: photogrammetry-based capture, a fast web-native 3D viewer, and provenance and condition notes anchored directly to the 3D model, so remote buyers get the same close inspection as an in-person visit."
+
 # Playstation
 - company: PlayStation (Sony Interactive Entertainment)
   logo: playstation.png
   position: Machine Learning Engineer
-  duration: 2025
+  duration: 2025-2026
   summary: "At PlayStation, I work on a deep learning pipeline for high-fidelity facial animation. The system learns to animate production-ready Maya face rigs directly from head-mounted camera footage. My contributions focus on building and optimizing neural architectures that map video inputs to rig control parameters, using a small set of artist-annotated training sequences. My work bridges deep learning research and practical production tools, accelerating the animation process for cinematic game content."
 
 # Dimension
