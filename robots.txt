@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pierre-wilmot.github.io/resume/sitemap.xml
