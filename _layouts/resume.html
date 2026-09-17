@@ -46,6 +46,9 @@
 
       </header>
 
+      {% assign ask_ai_prompt = "Read Pierre Wilmot's background profile, hold it in context, then either answer my question about him or, if I paste a job description, assess whether he'd be a good fit using the profile's own instructions. Profile URL: https://pierre-wilmot.github.io/resume/ai-profile.html" %}
+      <p class="ask-ai-line no-print">Prefer to ask an AI about me? <a href="https://claude.ai/new?q={{ ask_ai_prompt | url_encode }}" target="_blank" rel="noopener">Claude</a> &middot; <a href="https://chat.openai.com/?q={{ ask_ai_prompt | url_encode }}" target="_blank" rel="noopener">ChatGPT</a> &middot; <a href="https://www.google.com/search?udm=50&amp;q={{ ask_ai_prompt | url_encode }}" target="_blank" rel="noopener">Google AI Mode</a> &middot; <a href="https://www.perplexity.ai/?q={{ ask_ai_prompt | url_encode }}" target="_blank" rel="noopener">Perplexity</a> &mdash; reads <a href="ai-profile.html">ai-profile.html</a></p>
+
       {% if site.resume_section_experience %}
       <!-- begin Experience -->
       <section class="content-section">

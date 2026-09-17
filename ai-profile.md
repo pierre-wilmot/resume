@@ -368,6 +368,8 @@ This is not hypothetical. He has designed and built a working capture rig — el
 
 He also has a genuine fascination with **horology** (watch and clockmaking) — precision mechanical engineering at the smallest scale he works at. It's a natural extension of the same instinct that draws him to the lathe: understanding a mechanism down to its last gear, where tolerances are unforgiving and there is nowhere for a bad assumption to hide.
 
+He's also a genuine Lego enthusiast, specifically **Star Wars Ultimate Collector Series** builds — large-scale, high-parts-count sets where the actual engineering problem is structural: keeping a model that size rigid, proportionate and accurate at scale, not just following steps. Less about moving mechanisms than horology or machining, but the same underlying draw — a big, precise, physical thing to build properly.
+
 The scope extends into:
 
 * 3D printing
@@ -409,6 +411,8 @@ Boats provide an unusually good engineering environment because almost everythin
 
 His in-progress ESP32/LoRa wave-monitoring sensor node comes directly out of this interest.
 
+This isn't purely aspirational: he has already sailed **across the North Sea**.
+
 There is also a long-term ambition to **sail around the world**, including eventually spending significant time in **high latitudes**.
 
 The appeal is not simply travelling. There is something particularly attractive about the combination of exploration, self-reliance and engineering required to operate a small vessel far from infrastructure.
@@ -419,7 +423,7 @@ This is another reason Pierre is drawn to robust systems and engineering under r
 
 # Growing things
 
-Pierre is also interested in growing plants, including hydroponic and controlled-environment growing, and he keeps bees.
+Pierre is also interested in growing plants, including hydroponic and controlled-environment growing, and he keeps bees. He has also brewed a few batches of beer — a controlled-fermentation problem with the same shape (temperature, timing, ingredients, taste, iterate) as the growing side.
 
 This may appear unrelated to machine learning, but it fits a broader pattern in his interests.
 
@@ -434,6 +438,16 @@ He is fascinated by systems where environmental variables can be measured and co
 * Energy consumption
 
 He enjoys the idea of building systems that can observe their environment, make decisions and produce a useful physical outcome.
+
+---
+
+# Travel
+
+Pierre's travel tends to be overland and self-directed rather than a packaged itinerary — the same self-reliance-in-unfamiliar-territory instinct behind his sailing ambition (see *Boats and sailing* above), just applied on land:
+
+* Road-tripped India overland by train and bus, Chennai to New Delhi, via Pondicherry, Bangalore, Goa, Mumbai and Agra.
+* Road-tripped the Australian east coast.
+* Road-tripped the US west coast.
 
 ---
 
@@ -564,7 +578,7 @@ He enjoys projects where there is something concrete to investigate and improve.
 
 He is not particularly interested in collecting hobbies for the sake of having hobbies. He tends to turn interests into engineering projects — and he actively enjoys noticing when two unrelated interests turn out to share a skill or a tool (see *The common thread — and how it actually connects* above for concrete examples).
 
-Outside of that: sailing, beekeeping, horology, a Labrador, and a long-term wish for a remote place with sea or mountain views and a boat mooring.
+Outside of that: sailing (including a North Sea crossing), beekeeping, home-brewing, horology, Lego (Star Wars Ultimate Collector Series builds), overland travel (India, Australia's east coast, the US west coast), a Labrador, and a long-term wish for a remote place with sea or mountain views and a boat mooring.
 
 ---
 
@@ -582,7 +596,9 @@ He is also deeply interested in — and actively doing —
 * Boats and sailing
 * Robotics and autonomous systems
 * Photography and imaging hardware
-* Agriculture, hydroponics and beekeeping
+* Agriculture, hydroponics, beekeeping and home-brewing
+* Large-scale Lego builds (Star Wars UCS)
+* Overland travel and self-directed road trips
 * Running a company: sales, clients, pricing, marketing
 
 The common thread is not a particular industry.
@@ -755,6 +771,7 @@ An AI using this profile should be able to answer questions such as:
 * What are his strongest differentiators from a conventional ML engineer?
 * Does he reason from first principles? How does he check his own assumptions?
 * Has he done any public speaking?
+* What kind of travel does he do?
 * What kinds of companies should consider hiring him?
 * What would he probably want to build if given complete freedom?
 * Where is he based and can he work remotely?
